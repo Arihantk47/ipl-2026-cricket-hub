@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience real-time TATA IPL 2026 matches with live scores, custom commentaries, and interactive simulator.">
+    <title>IPL 2026 - Live Match Center</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <!-- Premium Navigation Bar -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" id="nav-brand-link">
+                <!-- Golden IPL Trophy SVG Logo -->
+                <svg viewBox="0 0 100 100" class="brand-logo" aria-label="IPL Logo">
+                    <defs>
+                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f59e0b" />
+                            <stop offset="50%" stop-color="#fbbf24" />
+                            <stop offset="100%" stop-color="#d97706" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                    <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                    <path d="M30,75 L70,75 L75,85 L25,85 Z" fill="url(#gold-grad)"/>
+                    <circle cx="50" cy="58" r="6" fill="#0b0f19"/>
+                    <!-- Cricket Bats Crossing -->
+                    <rect x="22" y="30" width="6" height="50" transform="rotate(-30, 25, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                    <rect x="72" y="30" width="6" height="50" transform="rotate(30, 75, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                </svg>
+                <div class="brand-text">
+                    <span class="brand-title">IPL</span>
+                    <span class="brand-subtitle">PREMIER LEAGUE</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navigation-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="live.html" class="nav-item active"><i class="fa-solid fa-circle-play"></i> Live</a>
+                <a href="table.html" class="nav-item"><i class="fa-solid fa-list-ol"></i> Points Table</a>
+                <a href="stats.html" class="nav-item"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+                <a href="achievements.html" class="nav-item"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="membership.html" class="nav-item"><i class="fa-solid fa-id-card"></i> Membership</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="live.html" class="live-btn" id="live-match-btn">
+                    <span class="live-pulse"></span> LIVE NOW
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-container">
+        <!-- Live / Recent Match Section -->
+        <section class="section" id="live-match">
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Matchday Showcase</span>
+                    <h2 class="section-title">Live Match Center</h2>
+                </div>
+                <div class="status-pill live-pill">
+                    <span class="pulse-dot"></span> LIVE SIMULATOR
+                </div>
+            </div>
+
+            <!-- Main Interactive Live widget -->
+            <div class="match-widget">
+                <div class="match-meta">
+                    <span class="match-venue"><i class="fa-solid fa-location-dot"></i> Wankhede Stadium, Mumbai</span>
+                    <span class="match-date"><i class="fa-solid fa-calendar-days"></i> Match 42 of 74 &bull; Target: 199</span>
+                </div>
+                
+                <div class="match-teams-grid">
+                    <!-- Team 1: Mumbai Indians -->
+                    <div class="match-team team-left">
+                        <div class="team-graphics">
+                            <svg viewBox="0 0 100 100" class="team-logo-svg mi-logo">
+                                <circle cx="50" cy="50" r="45" fill="#0c4a6e" stroke="#f59e0b" stroke-width="2"/>
+                                <path d="M50,50 L50,15 C65,15 65,35 50,35 Z" fill="#3b82f6"/>
+                                <path d="M50,50 L85,50 C85,65 65,65 65,50 Z" fill="#60a5fa"/>
+                                <path d="M50,50 L50,85 C35,85 35,65 50,65 Z" fill="#2563eb"/>
+                                <circle cx="50" cy="50" r="10" fill="#f59e0b"/>
+                            </svg>
+                            <h3 class="team-name">Mumbai Indians</h3>
+                            <span class="team-abbr">MI</span>
+                        </div>
+                        <div class="team-score-block">
+                            <div class="team-score">198<span class="wickets">/6</span></div>
+                            <div class="team-overs">20.0 Overs</div>
+                        </div>
+                    </div>
+                    <!-- Versus Divider -->
+                    <div class="match-vs">
+                        <div class="vs-badge">VS</div>
+                        <div class="match-indicator">CSK needs 15 runs from 10 balls</div>
+                    </div>
+                    <!-- Team 2: Chennai Super Kings (Batting Second) -->
+                    <div class="match-team team-right">
+                        <div class="team-score-block text-right">
+                            <div class="team-score" id="csk-live-score">184<span class="wickets" id="csk-live-wickets">/4</span></div>
+                            <div class="team-overs" id="csk-live-overs">18.2 <span class="overs-label">/ 20 Overs</span></div>
+                        </div>
+                        <div class="team-graphics">
+                            <svg viewBox="0 0 100 100" class="team-logo-svg csk-logo">
+                                <circle cx="50" cy="50" r="45" fill="#fef08a" stroke="#d97706" stroke-width="2"/>
+                                <path d="M35,30 C30,35 25,45 30,55 C32,60 38,62 42,65 C45,67 55,75 65,70 C75,65 72,50 68,45 C65,40 60,35 55,32 C48,28 40,28 35,30 Z" fill="#eab308"/>
+                                <path d="M68,45 L78,40 L70,52 L79,50 L68,60 L75,65 L60,68" fill="none" stroke="#d97706" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M40,42 C38,42 36,45 37,47 C38,49 41,49 41,47 C41,45 40,42 40,42 Z" fill="#0f172a"/>
+                            </svg>
+                            <h3 class="team-name">Chennai Super Kings</h3>
+                            <span class="team-abbr">CSK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Match Status message bar -->
+                <div class="match-status-bar">
+                    <div class="status-message" id="simulation-verdict">
+                        CSK need <span class="highlight" id="runs-needed">15 runs</span> in <span class="highlight" id="balls-remaining">10 balls</span> to win. Current RR: <span id="crr-val">10.04</span> | Req RR: <span id="rrr-val">9.00</span>
+                    </div>
+                    <div class="batsmen-bowler-summary">
+                        <div class="live-players">
+                            <span><i class="fa-solid fa-square-poll-horizontal icon-accent"></i> <strong id="batsman-1-name">R. Ravindra</strong> <span id="batsman-1-runs">74</span>*(<span id="batsman-1-balls">42</span>)</span>
+                            <span><strong id="batsman-2-name">MS Dhoni</strong> <span id="batsman-2-runs">12</span>*(<span id="batsman-2-balls">4</span>)</span>
+                        </div>
+                        <div class="live-bowler">
+                            <span><i class="fa-solid fa-baseball icon-accent"></i> <strong id="bowler-name">J. Bumrah</strong> <span id="bowler-wickets">1</span>/<span id="bowler-runs">28</span> (<span id="bowler-overs">3.2</span>)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Sim & Controls -->
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                    <button class="btn btn-primary" id="btn-simulate-ball" style="box-shadow: 0 4px 15px rgba(245,158,11,0.4);"><i class="fa-solid fa-baseball"></i> Simulate Next Ball</button>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">Simulate real-time tournament progression! Every click rolls runs, wickets, extras, and live commentary feeds.</p>
+                </div>
+
+                <!-- CTA buttons -->
+                <div class="match-cta-bar">
+                    <button class="btn-match-action" id="btn-show-scorecard"><i class="fa-solid fa-list"></i> View Scorecard</button>
+                    <button class="btn-match-action btn-accent-action" id="btn-watch-stream"><i class="fa-solid fa-play"></i> Watch Stream</button>
+                </div>
+            </div>
+
+            <!-- Interactive Commentary & Full Scorecard layout -->
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem;" id="match-center-details">
+                <!-- Live Commentary Logs -->
+                <div class="table-card" style="padding: 1.5rem 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-microphone" style="color: var(--primary);"></i> Ball-by-Ball Commentary</h3>
+                    <div id="commentary-log" style="max-height: 350px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.85rem; padding-right: 0.5rem;">
+                        <div style="background: rgba(255,255,255,0.02); border-left: 3px solid var(--primary); padding: 0.85rem; border-radius: 4px;">
+                            <strong>Over 18.2:</strong> J. Bumrah to R. Ravindra, 1 run. Length ball outside off, carved away to deep cover for a single. Ravindra moves to 74.
+                        </div>
+                        <div style="background: rgba(255,255,255,0.02); padding: 0.85rem; border-radius: 4px;">
+                            <strong>Over 18.1:</strong> J. Bumrah to MS Dhoni, 1 run. Off cutter on a good length, Dhoni clips it to deep square leg for a single.
+                        </div>
+                        <div style="background: rgba(255,255,255,0.02); padding: 0.85rem; border-radius: 4px; border-left: 3px solid var(--accent-red);">
+                            <strong>Over 17.6:</strong> G. Coetzee to S. Dube, <strong>WICKET!</strong> Caught! Fuller length delivery, Dube attempts the big heave but slices it high into the Mumbai night. Tim David circles underneath it at long-on and takes a comfortable catch. Dube departs for 34!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Scorecard Section (Accordion style) -->
+                <div class="table-card" id="scorecard-container" style="display: none; padding: 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+                        <span><i class="fa-solid fa-table-list" style="color: var(--primary);"></i> Match Scorecard</span>
+                        <button id="close-scorecard" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 1rem;"><i class="fa-solid fa-x"></i> Close</button>
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+                        <div>
+                            <h4 style="color: #fbbf24; margin-bottom: 0.75rem;">Chennai Super Kings (Innings)</h4>
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Batsman</th>
+                                        <th>Runs</th>
+                                        <th>Balls</th>
+                                        <th>4s</th>
+                                        <th>6s</th>
+                                        <th>SR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">Ruturaj Gaikwad (c)</td>
+                                        <td>42</td>
+                                        <td>26</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>161.54</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Rachin Ravindra</td>
+                                        <td id="scorecard-r-runs">74</td>
+                                        <td id="scorecard-r-balls">42</td>
+                                        <td id="scorecard-r-fours">8</td>
+                                        <td id="scorecard-r-sixes">3</td>
+                                        <td id="scorecard-r-sr">176.19</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Shivam Dube</td>
+                                        <td>34</td>
+                                        <td>20</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>170.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">MS Dhoni (wk)</td>
+                                        <td id="scorecard-d-runs">12</td>
+                                        <td id="scorecard-d-balls">4</td>
+                                        <td id="scorecard-d-fours">0</td>
+                                        <td id="scorecard-d-sixes">2</td>
+                                        <td id="scorecard-d-sr">300.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Watch Stream Popup Modal -->
+    <div class="checkout-modal" id="stream-modal">
+        <div class="checkout-modal-content" style="max-width: 680px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
+                <span><span class="live-pulse" style="background-color: #ef4444; margin-right: 0.5rem;"></span> TATA IPL 2026 Live Broadcast</span>
+                <button id="close-stream" style="background: transparent; border: none; color: #ffffff; cursor: pointer; font-size: 1.25rem;"><i class="fa-solid fa-xmark"></i></button>
+            </h3>
+            
+            <div style="background: #000; border-radius: 12px; width: 100%; height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1.5px solid rgba(255,255,255,0.08);">
+                <div style="position: absolute; top: 15px; left: 15px; background: rgba(239, 68, 68, 0.85); color: #fff; padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; font-family: var(--font-heading); letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                    <span class="live-pulse" style="width: 6px; height: 6px; background-color: white;"></span> LIVE FULL HD
+                </div>
+                <div style="position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.6); color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-family: var(--font-heading); display: flex; align-items: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-eye" style="color: #60a5fa;"></i> 4.8M Viewers
+                </div>
+                
+                <i class="fa-regular fa-circle-play" style="font-size: 5rem; color: var(--primary); cursor: pointer; filter: drop-shadow(0 4px 15px rgba(245,158,11,0.45)); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                <p style="margin-top: 1.5rem; font-weight: 600; color: #cbd5e1; font-size: 0.95rem;">Wankhede Stadium feed connected successfully.</p>
+                <p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.25rem;">Press play to begin simulated interactive broadcast stream.</p>
+            </div>
+            
+            <div style="display: flex; justify-content: space-around; margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1rem;">
+                <span style="font-size: 0.8rem; color: var(--text-secondary);"><i class="fa-solid fa-volume-high" style="color: var(--primary);"></i> English (Stereo)</span>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);"><i class="fa-solid fa-sliders" style="color: var(--primary);"></i> Auto (1080p60)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Premium Footer -->
+    <footer class="footer" id="footer-section">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <svg viewBox="0 0 100 100" class="footer-logo">
+                        <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                        <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                        <path d="M30,75 L70,75 L75,85 L25,85 Z" fill="url(#gold-grad)"/>
+                    </svg>
+                    <div class="footer-brand-text">
+                        <span class="footer-title">IPL</span>
+                        <span class="footer-subtitle">INDIAN PREMIER LEAGUE</span>
+                    </div>
+                </div>
+                <p class="footer-desc">The official hub for TATA IPL 2026 statistics, live score tracking, standings, and team news. Designed for cricket aficionados globally.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="live.html">Match Center</a></li>
+                        <li><a href="table.html">Points Table</a></li>
+                        <li><a href="stats.html">Stats Leaders</a></li>
+                        <li><a href="achievements.html">Franchise Achievements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>Teams</h4>
+                    <ul>
+                        <li><a href="#teams">Chennai Super Kings</a></li>
+                        <li><a href="#teams">Mumbai Indians</a></li>
+                        <li><a href="#teams">Royal Challengers Bengaluru</a></li>
+                        <li><a href="#teams">Kolkata Knight Riders</a></li>
+                        <li><a href="#teams">Sunrisers Hyderabad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BCCI. Handcrafted with premium aesthetics.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Live Score Simulator Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Live Stats Variables
+            let cskRuns = 184;
+            let cskWickets = 4;
+            let currentOvers = 18.2;
+            let ballsInCurrentOver = 2; // (18.2 means 2 balls bowled in 19th over)
+            let totalBallsCSK = 110; // (18.2 overs = 110 balls)
+
+            // Players
+            let rRavindraRuns = 74;
+            let rRavindraBalls = 42;
+            let msDhoniRuns = 12;
+            let msDhoniBalls = 4;
+
+            // Bowler (J. Bumrah)
+            let bumrahRunsConceded = 28;
+            let bumrahWickets = 1;
+            let bumrahBallsBowled = 20; // 3.2 overs
+
+            const target = 199;
+            const maxBalls = 120;
+            let isMatchOver = false;
+
+            // DOM elements
+            const btnSimulate = document.getElementById('btn-simulate-ball');
+            const scoreText = document.getElementById('csk-live-score');
+            const oversText = document.getElementById('csk-live-overs');
+            const verdictText = document.getElementById('simulation-verdict');
+            const logBox = document.getElementById('commentary-log');
+
+            const rRunsEl = document.getElementById('batsman-1-runs');
+            const rBallsEl = document.getElementById('batsman-1-balls');
+            const dRunsEl = document.getElementById('batsman-2-runs');
+            const dBallsEl = document.getElementById('batsman-2-balls');
+
+            const bWicketsEl = document.getElementById('bowler-wickets');
+            const bRunsEl = document.getElementById('bowler-runs');
+            const bOversEl = document.getElementById('bowler-overs');
+
+            // Scorecard elements
+            const scorecardRRuns = document.getElementById('scorecard-r-runs');
+            const scorecardRBalls = document.getElementById('scorecard-r-balls');
+            const scorecardRSR = document.getElementById('scorecard-r-sr');
+            const scorecardDRuns = document.getElementById('scorecard-d-runs');
+            const scorecardDBalls = document.getElementById('scorecard-d-balls');
+            const scorecardDSR = document.getElementById('scorecard-d-sr');
+
+            // Simulator logic
+            btnSimulate.addEventListener('click', () => {
+                if (isMatchOver) return;
+
+                // Roll a random outcome:
+                // 0 (dot), 1 (single), 2 (double), 4 (boundary), 6 (six), W (wicket), Extra (wide/no-ball)
+                const outcomes = ['0', '1', '1', '2', '4', '6', 'W', 'Ex'];
+                const roll = outcomes[Math.floor(Math.random() * outcomes.length)];
+
+                let ballDescription = '';
+                let runsScored = 0;
+                let isExtra = false;
+                let isWicket = false;
+
+                // Determine active batsman (Dhoni vs Ravindra - Dhoni faces odd balls, Ravindra faces even, or simply track strike)
+                // Let's assume R. Ravindra is on strike for simpler implementation, or Dhoni
+                const strikeBatsman = (totalBallsCSK % 2 === 0) ? 'R. Ravindra' : 'MS Dhoni';
+
+                // Process Roll
+                if (roll === 'Ex') {
+                    // Extra (Wide / No-ball)
+                    isExtra = true;
+                    runsScored = 1;
+                    ballDescription = `Wide delivery. J. Bumrah sprays it down the leg side. Extras tick up.`;
+                } else if (roll === 'W') {
+                    isWicket = true;
+                    cskWickets++;
+                    ballDescription = `<strong>WICKET!</strong> Bowled him! J. Bumrah fires in a scorching yorker at 145 kph. ${strikeBatsman} is late down and the off-stump is flattened! Spectacular bowling.`;
+                } else {
+                    runsScored = parseInt(roll);
+                    if (runsScored === 0) {
+                        ballDescription = `Good length delivery outside off, defended back to the bowler. Dot ball.`;
+                    } else if (runsScored === 1) {
+                        ballDescription = `Tucked away softly off the pads to short fine leg for a quick single.`;
+                    } else if (runsScored === 2) {
+                        ballDescription = `Flicked away into the midwicket pocket. Good hard running sees them complete a comfortable brace.`;
+                    } else if (runsScored === 4) {
+                        ballDescription = `<strong>FOUR!</strong> Short and wide, slapped through point. Elegant shot! The crowd goes wild.`;
+                    } else if (runsScored === 6) {
+                        ballDescription = `<strong>SIX!</strong> Massive! Dhoni/Ravindra down on one knee and launched deep into the Wankhede grandstand! Magnificent striking.`;
+                    }
+                }
+
+                // Update score
+                cskRuns += runsScored;
+                if (!isExtra) {
+                    totalBallsCSK++;
+                    ballsInCurrentOver++;
+                    if (ballsInCurrentOver === 6) {
+                        ballsInCurrentOver = 0;
+                        currentOvers = Math.floor(currentOvers) + 1;
+                    } else {
+                        currentOvers = Math.floor(currentOvers) + (ballsInCurrentOver / 10);
+                    }
+
+                    // Update active batsman balls
+                    if (strikeBatsman === 'R. Ravindra') {
+                        rRavindraBalls++;
+                        rRavindraRuns += runsScored;
+                    } else {
+                        msDhoniBalls++;
+                        msDhoniRuns += runsScored;
+                    }
+
+                    // Bowler stats
+                    bumrahBallsBowled++;
+                    bumrahRunsConceded += runsScored;
+                    if (isWicket) {
+                        bumrahWickets++;
+                    }
+                } else {
+                    // extras increase runs conceded but not balls bowled
+                    bumrahRunsConceded += runsScored;
+                }
+
+                // Wicket check
+                if (isWicket) {
+                    if (cskWickets >= 10) {
+                        isMatchOver = true;
+                    }
+                }
+
+                // Target check
+                if (cskRuns >= target) {
+                    isMatchOver = true;
+                }
+
+                // Balls limit check
+                if (totalBallsCSK >= maxBalls && cskRuns < target) {
+                    isMatchOver = true;
+                }
+
+                // Render dynamic text updates
+                scoreText.innerHTML = `${cskRuns}<span class="wickets">/${cskWickets}</span>`;
+                oversText.innerHTML = `${currentOvers.toFixed(1)} <span class="overs-label">/ 20 Overs</span>`;
+                
+                rRunsEl.innerText = rRavindraRuns;
+                rBallsEl.innerText = rRavindraBalls;
+                dRunsEl.innerText = msDhoniRuns;
+                dBallsEl.innerText = msDhoniBalls;
+
+                bWicketsEl.innerText = bumrahWickets;
+                bRunsEl.innerText = bumrahRunsConceded;
+                
+                let bOversRender = Math.floor(bumrahBallsBowled / 6) + ((bumrahBallsBowled % 6) / 10);
+                bOversEl.innerText = bOversRender.toFixed(1);
+
+                // Update scorecard table
+                scorecardRRuns.innerText = rRavindraRuns;
+                scorecardRBalls.innerText = rRavindraBalls;
+                scorecardRSR.innerText = ((rRavindraRuns / rRavindraBalls) * 100).toFixed(2);
+                scorecardDRuns.innerText = msDhoniRuns;
+                scorecardDBalls.innerText = msDhoniBalls;
+                scorecardDSR.innerText = ((msDhoniRuns / msDhoniBalls) * 100).toFixed(2);
+
+                // Calculate calculations
+                const runsRemaining = target - cskRuns;
+                const ballsRemaining = maxBalls - totalBallsCSK;
+                const crr = (cskRuns / (totalBallsCSK / 6)).toFixed(2);
+                const rrr = (ballsRemaining > 0) ? ((runsRemaining / ballsRemaining) * 6).toFixed(2) : '0.00';
+
+                // Status message update
+                if (isMatchOver) {
+                    btnSimulate.disabled = true;
+                    btnSimulate.style.opacity = '0.5';
+                    btnSimulate.style.cursor = 'not-allowed';
+
+                    if (cskRuns >= target) {
+                        verdictText.innerHTML = `<span style="color: var(--success); font-weight: 800;"><i class="fa-solid fa-trophy text-amber-500"></i> CHENNAI SUPER KINGS WON by ${10 - cskWickets} wickets!</span>`;
+                        ballDescription += ` <br><strong style="color: #10b981;">CSK cross the finish line! Absolute scenes at the Wankhede!</strong>`;
+                    } else if (cskWickets >= 10) {
+                        verdictText.innerHTML = `<span style="color: var(--accent-red); font-weight: 800;"><i class="fa-solid fa-circle-xmark"></i> MUMBAI INDIANS WON by ${runsRemaining - 1} runs! All out!</span>`;
+                        ballDescription += ` <br><strong style="color: #ef4444;">CSK are bowled out! MI win a absolute nailbiter!</strong>`;
+                    } else {
+                        verdictText.innerHTML = `<span style="color: var(--accent-red); font-weight: 800;"><i class="fa-solid fa-clock"></i> MUMBAI INDIANS WON by ${runsRemaining} runs! Overs completed.</span>`;
+                        ballDescription += ` <br><strong style="color: #ef4444;">Innings completed. CSK falls short by ${runsRemaining} runs.</strong>`;
+                    }
+                } else {
+                    verdictText.innerHTML = `CSK need <span class="highlight">${runsRemaining} runs</span> in <span class="highlight">${ballsRemaining} balls</span> to win. CRR: <span>${crr}</span> | RRR: <span>${rrr}</span>`;
+                }
+
+                // Log commentary feed
+                const overDecimal = (Math.floor((totalBallsCSK - 1) / 6)) + (((totalBallsCSK - 1) % 6 + 1) / 10);
+                const logItem = document.createElement('div');
+                logItem.style.background = isWicket ? 'rgba(239, 68, 68, 0.15)' : 'rgba(255,255,255,0.02)';
+                logItem.style.borderLeft = isWicket ? '3px solid var(--accent-red)' : (roll === '6' || roll === '4') ? '3px solid #eab308' : 'none';
+                logItem.style.padding = '0.85rem';
+                logItem.style.borderRadius = '4px';
+                logItem.style.animation = 'fadeInUp 0.3s ease';
+                logItem.innerHTML = `<strong>Over ${overDecimal.toFixed(1)}:</strong> J. Bumrah to ${strikeBatsman}, ${roll === 'W' ? 'WICKET' : roll === 'Ex' ? 'Wide' : roll + ' run(s)'}. ${ballDescription}`;
+                
+                logBox.insertBefore(logItem, logBox.firstChild);
+            });
+
+            // Scorecard Toggles
+            const btnScorecard = document.getElementById('btn-show-scorecard');
+            const closeScorecard = document.getElementById('close-scorecard');
+            const scorecardCont = document.getElementById('scorecard-container');
+
+            btnScorecard.addEventListener('click', () => {
+                scorecardCont.style.display = 'block';
+                scorecardCont.scrollIntoView({ behavior: 'smooth' });
+            });
+            closeScorecard.addEventListener('click', () => {
+                scorecardCont.style.display = 'none';
+            });
+
+            // Stream Modal Toggles
+            const btnWatchStream = document.getElementById('btn-watch-stream');
+            const closeStream = document.getElementById('close-stream');
+            const streamModal = document.getElementById('stream-modal');
+
+            btnWatchStream.addEventListener('click', () => {
+                streamModal.style.display = 'flex';
+            });
+            closeStream.addEventListener('click', () => {
+                streamModal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
