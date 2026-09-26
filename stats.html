@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official TATA IPL 2026 player stats leaderboards for Orange Cap, Purple Cap, and Super Striker.">
+    <title>IPL 2026 - Tournament Stat Leaders</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <!-- Premium Navigation Bar -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" id="nav-brand-link">
+                <!-- Golden IPL Trophy SVG Logo -->
+                <svg viewBox="0 0 100 100" class="brand-logo" aria-label="IPL Logo">
+                    <defs>
+                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f59e0b" />
+                            <stop offset="50%" stop-color="#fbbf24" />
+                            <stop offset="100%" stop-color="#d97706" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                    <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                    <path d="M30,75 L70,75 L75,85 L25,85 Z" fill="url(#gold-grad)"/>
+                    <circle cx="50" cy="58" r="6" fill="#0b0f19"/>
+                    <!-- Cricket Bats Crossing -->
+                    <rect x="22" y="30" width="6" height="50" transform="rotate(-30, 25, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                    <rect x="72" y="30" width="6" height="50" transform="rotate(30, 75, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                </svg>
+                <div class="brand-text">
+                    <span class="brand-title">IPL</span>
+                    <span class="brand-subtitle">PREMIER LEAGUE</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navigation-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="live.html" class="nav-item"><i class="fa-solid fa-circle-play"></i> Live</a>
+                <a href="table.html" class="nav-item"><i class="fa-solid fa-list-ol"></i> Points Table</a>
+                <a href="stats.html" class="nav-item active"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+                <a href="achievements.html" class="nav-item"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="membership.html" class="nav-item"><i class="fa-solid fa-id-card"></i> Membership</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="live.html" class="live-btn" id="live-match-btn">
+                    <span class="live-pulse"></span> LIVE NOW
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-container">
+        <!-- Stats / Leaders Section -->
+        <section class="section" id="stats">
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <span class="section-subtitle">Elite Performers</span>
+                    <h2 class="section-title">Tournament Stat Leaders</h2>
+                </div>
+                <div class="stats-toggle">
+                    <span class="active-badge"><i class="fa-solid fa-chart-line"></i> TATA IPL 2026</span>
+                </div>
+            </div>
+
+            <!-- Three major category columns -->
+            <div class="stats-categories-container">
+                
+                <!-- Category 1: ORANGE CAP (Runs) -->
+                <div class="stats-card-premium stats-orange">
+                    <div class="stats-card-title-wrap">
+                        <h3 class="stats-card-title"><i class="fa-solid fa-crown" style="color:#f97316;"></i> Orange Cap</h3>
+                        <span class="stats-card-badge">Most Runs</span>
+                    </div>
+
+                    <!-- Highlight Leader -->
+                    <div class="player-profile" style="margin-bottom: 2rem;">
+                        <div class="avatar-wrapper orange-glow" style="width: 76px; height: 76px;">
+                            <svg viewBox="0 0 100 100" class="player-avatar">
+                                <circle cx="50" cy="50" r="50" fill="#1e293b"/>
+                                <path d="M25,45 C25,25 75,25 75,45 C70,30 30,30 25,45 Z" fill="#0f172a"/>
+                                <circle cx="50" cy="52" r="22" fill="#fed7aa"/>
+                                <path d="M28,38 C35,22 65,22 72,38 Z" fill="#0f172a"/>
+                                <circle cx="43" cy="50" r="2" fill="#0f172a"/>
+                                <circle cx="57" cy="50" r="2" fill="#0f172a"/>
+                                <path d="M35,60 C38,72 62,72 65,60 C60,65 40,65 35,60 Z" fill="#334155"/>
+                                <path d="M20,95 C20,80 35,74 50,74 C65,74 80,80 80,95 Z" fill="#f97316"/>
+                                <path d="M32,38 C32,25 68,25 68,38 Z" fill="#ea580c"/>
+                                <path d="M25,38 L75,38 L70,32 L30,32 Z" fill="#f97316"/>
+                            </svg>
+                        </div>
+                        <div class="player-meta">
+                            <h3 class="player-name" style="font-size: 1.25rem;">Shubman Gill</h3>
+                            <span class="player-team-label text-orange"><i class="fa-solid fa-circle-check"></i> Gujarat Titans</span>
+                        </div>
+                        <div style="margin-left: auto; text-align: right;">
+                            <span style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; color: #f97316;">568</span>
+                            <span style="display:block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Runs</span>
+                        </div>
+                    </div>
+
+                    <!-- Top 5 List -->
+                    <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Top 5 Leaders</h4>
+                    <div class="stats-leaders-list">
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge leader-rank-1">1</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Shubman Gill</span>
+                                    <span class="leader-team-txt">Gujarat Titans &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">568</span>
+                                <span class="leader-stat-lbl">Runs</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">2</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Virat Kohli</span>
+                                    <span class="leader-team-txt">Royal Challengers Bengaluru &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">542</span>
+                                <span class="leader-stat-lbl">Runs</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">3</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Ruturaj Gaikwad</span>
+                                    <span class="leader-team-txt">Chennai Super Kings &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">510</span>
+                                <span class="leader-stat-lbl">Runs</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">4</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Travis Head</span>
+                                    <span class="leader-team-txt">Sunrisers Hyderabad &bull; 11 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">495</span>
+                                <span class="leader-stat-lbl">Runs</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">5</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">KL Rahul</span>
+                                    <span class="leader-team-txt">Lucknow Super Giants &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">480</span>
+                                <span class="leader-stat-lbl">Runs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Full List Trigger -->
+                    <button class="see-full-list-btn" onclick="toggleSection('orange-full-list')"><i class="fa-solid fa-angles-down"></i> See Full List</button>
+
+                    <!-- Hidden Full List -->
+                    <div class="full-list-container" id="orange-full-list">
+                        <table class="full-list-table">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Mat</th>
+                                    <th>Runs</th>
+                                    <th>Avg</th>
+                                    <th>SR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>6</td><td>Jos Buttler</td><td>RR</td><td>10</td><td>435</td><td>48.33</td><td>145.22</td></tr>
+                                <tr><td>7</td><td>Yashasvi Jaiswal</td><td>RR</td><td>10</td><td>410</td><td>41.00</td><td>152.12</td></tr>
+                                <tr><td>8</td><td>Suryakumar Yadav</td><td>MI</td><td>9</td><td>398</td><td>44.22</td><td>168.45</td></tr>
+                                <tr><td>9</td><td>Phil Salt</td><td>KKR</td><td>11</td><td>385</td><td>38.50</td><td>170.10</td></tr>
+                                <tr><td>10</td><td>Sanju Samson</td><td>RR</td><td>10</td><td>374</td><td>46.75</td><td>151.22</td></tr>
+                                <tr><td>11</td><td>Heinrich Klaasen</td><td>SRH</td><td>11</td><td>368</td><td>40.89</td><td>185.33</td></tr>
+                                <tr><td>12</td><td>Sunil Narine</td><td>KKR</td><td>11</td><td>350</td><td>31.81</td><td>188.46</td></tr>
+                                <tr><td>13</td><td>Rohit Sharma</td><td>MI</td><td>10</td><td>342</td><td>34.20</td><td>148.10</td></tr>
+                                <tr><td>14</td><td>Rishabh Pant</td><td>DC</td><td>11</td><td>335</td><td>33.50</td><td>155.12</td></tr>
+                                <tr><td>15</td><td>Sai Sudharsan</td><td>GT</td><td>10</td><td>328</td><td>32.80</td><td>138.25</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Category 2: PURPLE CAP (Wickets) -->
+                <div class="stats-card-premium stats-purple" style="margin-top: 3rem;">
+                    <div class="stats-card-title-wrap">
+                        <h3 class="stats-card-title"><i class="fa-solid fa-crown" style="color:#8b5cf6;"></i> Purple Cap</h3>
+                        <span class="stats-card-badge">Most Wickets</span>
+                    </div>
+
+                    <!-- Highlight Leader -->
+                    <div class="player-profile" style="margin-bottom: 2rem;">
+                        <div class="avatar-wrapper purple-glow" style="width: 76px; height: 76px;">
+                            <svg viewBox="0 0 100 100" class="player-avatar">
+                                <circle cx="50" cy="50" r="50" fill="#1e293b"/>
+                                <path d="M22,40 L28,32 L35,28 L48,25 L58,26 L70,30 L78,41 Z" fill="#020617"/>
+                                <circle cx="50" cy="52" r="22" fill="#ffedd5"/>
+                                <circle cx="43" cy="50" r="2.5" fill="#020617"/>
+                                <circle cx="57" cy="50" r="2.5" fill="#020617"/>
+                                <path d="M43,58 Q50,64 57,58" fill="none" stroke="#020617" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20,95 C20,80 35,74 50,74 C65,74 80,80 80,95 Z" fill="#2563eb"/>
+                                <path d="M32,38 C32,25 68,25 68,38 Z" fill="#7c3aed"/>
+                                <path d="M25,38 L75,38 L70,32 L30,32 Z" fill="#a855f7"/>
+                            </svg>
+                        </div>
+                        <div class="player-meta">
+                            <h3 class="player-name" style="font-size: 1.25rem;">Jasprit Bumrah</h3>
+                            <span class="player-team-label text-purple"><i class="fa-solid fa-circle-check"></i> Mumbai Indians</span>
+                        </div>
+                        <div style="margin-left: auto; text-align: right;">
+                            <span style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; color: #8b5cf6;">22</span>
+                            <span style="display:block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Wickets</span>
+                        </div>
+                    </div>
+
+                    <!-- Top 5 List -->
+                    <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Top 5 Leaders</h4>
+                    <div class="stats-leaders-list">
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge leader-rank-1">1</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Jasprit Bumrah</span>
+                                    <span class="leader-team-txt">Mumbai Indians &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">22</span>
+                                <span class="leader-stat-lbl">Wickets</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">2</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Harshal Patel</span>
+                                    <span class="leader-team-txt">Punjab Kings &bull; 11 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">20</span>
+                                <span class="leader-stat-lbl">Wickets</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">3</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Varun Chakaravarthy</span>
+                                    <span class="leader-team-txt">Kolkata Knight Riders &bull; 11 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">18</span>
+                                <span class="leader-stat-lbl">Wickets</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">4</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Yuzvendra Chahal</span>
+                                    <span class="leader-team-txt">Rajasthan Royals &bull; 10 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">17</span>
+                                <span class="leader-stat-lbl">Wickets</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">5</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Matheesha Pathirana</span>
+                                    <span class="leader-team-txt">Chennai Super Kings &bull; 8 Innings</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">16</span>
+                                <span class="leader-stat-lbl">Wickets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Full List Trigger -->
+                    <button class="see-full-list-btn" onclick="toggleSection('purple-full-list')"><i class="fa-solid fa-angles-down"></i> See Full List</button>
+
+                    <!-- Hidden Full List -->
+                    <div class="full-list-container" id="purple-full-list">
+                        <table class="full-list-table">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Mat</th>
+                                    <th>Wkts</th>
+                                    <th>Econ</th>
+                                    <th>Avg</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>6</td><td>T. Natarajan</td><td>SRH</td><td>10</td><td>15</td><td>8.90</td><td>21.20</td></tr>
+                                <tr><td>7</td><td>Arshdeep Singh</td><td>PBKS</td><td>11</td><td>15</td><td>9.10</td><td>23.50</td></tr>
+                                <tr><td>8</td><td>Mitchell Starc</td><td>KKR</td><td>11</td><td>14</td><td>10.22</td><td>28.45</td></tr>
+                                <tr><td>9</td><td>Sunil Narine</td><td>KKR</td><td>11</td><td>14</td><td>6.75</td><td>22.12</td></tr>
+                                <tr><td>10</td><td>Trent Boult</td><td>RR</td><td>10</td><td>13</td><td>7.80</td><td>24.30</td></tr>
+                                <tr><td>11</td><td>Kuldeep Yadav</td><td>DC</td><td>9</td><td>13</td><td>8.12</td><td>21.15</td></tr>
+                                <tr><td>12</td><td>Khaleel Ahmed</td><td>DC</td><td>11</td><td>12</td><td>9.30</td><td>29.20</td></tr>
+                                <tr><td>13</td><td>Mustafizur Rahman</td><td>CSK</td><td>9</td><td>12</td><td>9.15</td><td>24.12</td></tr>
+                                <tr><td>14</td><td>Sandeep Sharma</td><td>RR</td><td>7</td><td>11</td><td>7.95</td><td>18.25</td></tr>
+                                <tr><td>15</td><td>Pat Cummins</td><td>SRH</td><td>11</td><td>11</td><td>8.65</td><td>31.10</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Category 3: SUPER STRIKER (Strike Rate) -->
+                <div class="stats-card-premium stats-striker" style="margin-top: 3rem;">
+                    <div class="stats-card-title-wrap">
+                        <h3 class="stats-card-title"><i class="fa-solid fa-bolt" style="color:#06b6d4;"></i> Super Striker</h3>
+                        <span class="stats-card-badge">Highest Strike Rate</span>
+                    </div>
+
+                    <!-- Highlight Leader -->
+                    <div class="player-profile" style="margin-bottom: 2rem;">
+                        <div class="avatar-wrapper cyan-glow" style="width: 76px; height: 76px; border: 2px solid #06b6d4;">
+                            <svg viewBox="0 0 100 100" class="player-avatar">
+                                <circle cx="50" cy="50" r="50" fill="#1e293b"/>
+                                <path d="M25,45 C25,25 75,25 75,45 C70,30 30,30 25,45 Z" fill="#0f172a"/>
+                                <circle cx="50" cy="52" r="22" fill="#fed7aa"/>
+                                <circle cx="43" cy="50" r="2" fill="#0f172a"/>
+                                <circle cx="57" cy="50" r="2" fill="#0f172a"/>
+                                <path d="M35,60 C38,72 62,72 65,60 Q50,75 35,60 Z" fill="#334155"/>
+                                <path d="M20,95 C20,80 35,74 50,74 C65,74 80,80 80,95 Z" fill="#581c87"/>
+                            </svg>
+                        </div>
+                        <div class="player-meta">
+                            <h3 class="player-name" style="font-size: 1.25rem;">Sunil Narine</h3>
+                            <span class="player-team-label text-cyan" style="color:#22d3ee;"><i class="fa-solid fa-circle-check"></i> Kolkata Knight Riders</span>
+                        </div>
+                        <div style="margin-left: auto; text-align: right;">
+                            <span style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; color: #06b6d4;">188.46</span>
+                            <span style="display:block; font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Strike Rate</span>
+                        </div>
+                    </div>
+
+                    <!-- Top 5 List -->
+                    <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Top 5 Leaders</h4>
+                    <div class="stats-leaders-list">
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge leader-rank-1">1</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Sunil Narine</span>
+                                    <span class="leader-team-txt">Kolkata Knight Riders &bull; 350 Runs</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">188.46</span>
+                                <span class="leader-stat-lbl">Strike Rate</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">2</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Heinrich Klaasen</span>
+                                    <span class="leader-team-txt">Sunrisers Hyderabad &bull; 368 Runs</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">185.33</span>
+                                <span class="leader-stat-lbl">Strike Rate</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">3</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Jake Fraser-McGurk</span>
+                                    <span class="leader-team-txt">Delhi Capitals &bull; 280 Runs</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">184.21</span>
+                                <span class="leader-stat-lbl">Strike Rate</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">4</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Andre Russell</span>
+                                    <span class="leader-team-txt">Kolkata Knight Riders &bull; 195 Runs</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">182.10</span>
+                                <span class="leader-stat-lbl">Strike Rate</span>
+                            </div>
+                        </div>
+                        <div class="stats-leader-item">
+                            <div class="stats-leader-left">
+                                <span class="leader-rank-badge">5</span>
+                                <div class="leader-info">
+                                    <span class="leader-name-txt">Shivam Dube</span>
+                                    <span class="leader-team-txt">Chennai Super Kings &bull; 320 Runs</span>
+                                </div>
+                            </div>
+                            <div class="stats-leader-right">
+                                <span class="leader-stat-val">172.40</span>
+                                <span class="leader-stat-lbl">Strike Rate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Full List Trigger -->
+                    <button class="see-full-list-btn" onclick="toggleSection('striker-full-list')"><i class="fa-solid fa-angles-down"></i> See Full List</button>
+
+                    <!-- Hidden Full List -->
+                    <div class="full-list-container" id="striker-full-list">
+                        <table class="full-list-table">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Mat</th>
+                                    <th>Runs</th>
+                                    <th>Avg</th>
+                                    <th>SR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>6</td><td>Tristan Stubbs</td><td>DC</td><td>11</td><td>295</td><td>59.00</td><td>170.90</td></tr>
+                                <tr><td>7</td><td>Travis Head</td><td>SRH</td><td>11</td><td>495</td><td>45.00</td><td>169.52</td></tr>
+                                <tr><td>8</td><td>Nicholas Pooran</td><td>LSG</td><td>10</td><td>310</td><td>44.28</td><td>168.47</td></tr>
+                                <tr><td>9</td><td>Glenn Maxwell</td><td>RCB</td><td>8</td><td>112</td><td>14.00</td><td>164.70</td></tr>
+                                <tr><td>10</td><td>Tim David</td><td>MI</td><td>10</td><td>184</td><td>30.66</td><td>162.83</td></tr>
+                                <tr><td>11</td><td>Dinesh Karthik</td><td>RCB</td><td>10</td><td>224</td><td>56.00</td><td>161.15</td></tr>
+                                <tr><td>12</td><td>Liam Livingstone</td><td>PBKS</td><td>9</td><td>145</td><td>24.16</td><td>160.85</td></tr>
+                                <tr><td>13</td><td>Abdul Samad</td><td>SRH</td><td>10</td><td>138</td><td>27.60</td><td>158.62</td></tr>
+                                <tr><td>14</td><td>Ashutosh Sharma</td><td>PBKS</td><td>8</td><td>128</td><td>25.60</td><td>156.40</td></tr>
+                                <tr><td>15</td><td>Abhishek Sharma</td><td>SRH</td><td>11</td><td>312</td><td>28.36</td><td>155.22</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modern Premium Footer -->
+    <footer class="footer" id="footer-section">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <svg viewBox="0 0 100 100" class="footer-logo">
+                        <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                        <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                    </svg>
+                    <div class="footer-brand-text">
+                        <span class="footer-title">IPL</span>
+                        <span class="footer-subtitle">INDIAN PREMIER LEAGUE</span>
+                    </div>
+                </div>
+                <p class="footer-desc">The official hub for TATA IPL 2026 player stats and leaderboards. Designed for cricket aficionados globally.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="live.html">Match Center</a></li>
+                        <li><a href="table.html">Points Table</a></li>
+                        <li><a href="stats.html">Stats Leaders</a></li>
+                        <li><a href="achievements.html">Franchise Achievements</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BCCI. Handcrafted with premium aesthetics.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Toggling Accordion Script -->
+    <script>
+        function toggleSection(sectionId) {
+            const container = document.getElementById(sectionId);
+            const triggerButton = container.previousElementSibling;
+
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                triggerButton.innerHTML = `<i class="fa-solid fa-angles-up"></i> Hide Full List`;
+            } else {
+                triggerButton.innerHTML = `<i class="fa-solid fa-angles-down"></i> See Full List`;
+            }
+        }
+    </script>
+</body>
+</html>
