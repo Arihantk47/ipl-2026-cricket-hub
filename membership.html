@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for the official TATA IPL 2026 Franchise Membership. Simple registration form with local storage security verification.">
+    <title>IPL 2026 - Franchise Membership</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+    <!-- Premium Navigation Bar -->
+    <header class="navbar" id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" id="nav-brand-link">
+                <!-- Golden IPL Trophy SVG Logo -->
+                <svg viewBox="0 0 100 100" class="brand-logo" aria-label="IPL Logo">
+                    <defs>
+                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f59e0b" />
+                            <stop offset="50%" stop-color="#fbbf24" />
+                            <stop offset="100%" stop-color="#d97706" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                    <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                    <path d="M30,75 L70,75 L75,85 L25,85 Z" fill="url(#gold-grad)"/>
+                    <circle cx="50" cy="58" r="6" fill="#0b0f19"/>
+                    <!-- Cricket Bats Crossing -->
+                    <rect x="22" y="30" width="6" height="50" transform="rotate(-30, 25, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                    <rect x="72" y="30" width="6" height="50" transform="rotate(30, 75, 55)" rx="2" fill="url(#gold-grad)" opacity="0.8"/>
+                </svg>
+                <div class="brand-text">
+                    <span class="brand-title">IPL</span>
+                    <span class="brand-subtitle">PREMIER LEAGUE</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navigation-menu">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="live.html" class="nav-item"><i class="fa-solid fa-circle-play"></i> Live</a>
+                <a href="table.html" class="nav-item"><i class="fa-solid fa-list-ol"></i> Points Table</a>
+                <a href="stats.html" class="nav-item"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+                <a href="achievements.html" class="nav-item"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="membership.html" class="nav-item active"><i class="fa-solid fa-id-card"></i> Membership</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="live.html" class="live-btn" id="live-match-btn">
+                    <span class="live-pulse"></span> LIVE NOW
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-container" style="padding-top: 7.5rem;">
+        
+        <!-- Section Header -->
+        <div class="section-header" style="text-align: center; justify-content: center; align-items: center; margin-bottom: 2rem;">
+            <div class="section-title-wrap" style="align-items: center;">
+                <span class="section-subtitle">Official Registration</span>
+                <h2 class="section-title">Franchise Membership Portal</h2>
+            </div>
+        </div>
+
+        <!-- Centered Simplified Form -->
+        <div class="simple-form-wrapper">
+            <div class="form-header-membership">
+                <h3 style="font-size: 1.35rem; color: #ffffff;"><i class="fa-solid fa-user-pen" style="color:var(--primary); margin-right: 0.35rem;"></i> Register Your Account</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Enter your credentials below to create your official fan membership.</p>
+            </div>
+
+            <form id="registration-form">
+                
+                <!-- Franchise team select -->
+                <div class="form-group-membership">
+                    <label for="member-team">Select Favorite IPL Team</label>
+                    <select id="member-team">
+                        <option value="" disabled selected>Select Franchise Team</option>
+                        <option value="csk">Chennai Super Kings (CSK)</option>
+                        <option value="mi">Mumbai Indians (MI)</option>
+                        <option value="rcb">Royal Challengers Bengaluru (RCB)</option>
+                        <option value="kkr">Kolkata Knight Riders (KKR)</option>
+                        <option value="srh">Sunrisers Hyderabad (SRH)</option>
+                        <option value="gt">Gujarat Titans (GT)</option>
+                        <option value="rr">Rajasthan Royals (RR)</option>
+                        <option value="dc">Delhi Capitals (DC)</option>
+                        <option value="lsg">Lucknow Super Giants (LSG)</option>
+                        <option value="pbks">Punjab Kings (PBKS)</option>
+                    </select>
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-group-membership">
+                    <label for="member-name">Full Name</label>
+                    <input type="text" id="member-name" placeholder="John Doe">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group-membership">
+                    <label for="member-email">Email Address</label>
+                    <input type="text" id="member-email" placeholder="name@domain.com">
+                </div>
+
+                <!-- Password -->
+                <div class="form-group-membership">
+                    <label for="member-password">Password</label>
+                    <input type="password" id="member-password" placeholder="Create a password">
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group-membership">
+                    <label for="member-confirm-password">Confirm Password</label>
+                    <input type="password" id="member-confirm-password" placeholder="Retype password to confirm">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 1.5rem; justify-content: center;">
+                    <i class="fa-solid fa-circle-check"></i> Register Membership
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Modern Premium Footer -->
+    <footer class="footer" id="footer-section">
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <svg viewBox="0 0 100 100" class="footer-logo">
+                        <path d="M50,15 L62,35 L60,40 L50,30 L40,40 L38,35 Z" fill="url(#gold-grad)"/>
+                        <path d="M35,42 L65,42 L62,75 L38,75 Z" fill="url(#gold-grad)"/>
+                    </svg>
+                    <div class="footer-brand-text">
+                        <span class="footer-title">IPL</span>
+                        <span class="footer-subtitle">INDIAN PREMIER LEAGUE</span>
+                    </div>
+                </div>
+                <p class="footer-desc">The official registration center for TATA IPL 2026 fans. Designed for cricket aficionados globally.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="live.html">Match Center</a></li>
+                        <li><a href="table.html">Points Table</a></li>
+                        <li><a href="stats.html">Stats Leaders</a></li>
+                        <li><a href="achievements.html">Franchise Achievements</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BCCI. Handcrafted with premium aesthetics.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="membership.js"></script>
+</body>
+</html>
